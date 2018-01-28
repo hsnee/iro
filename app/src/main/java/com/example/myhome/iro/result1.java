@@ -1,11 +1,14 @@
 package com.example.myhome.iro;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.Arrays;
@@ -28,9 +31,7 @@ public class result1 extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         final String color2 = bundle.getString("some_key");
         final String color1 = bundle.getString("other_key");
-        System.out.println(color1);
-        System.out.println(color2);
-        if( palette1.contains(color1) ) {
+        if( palette1.contains(color1)) {
             if(palette1.contains(color2)) {
                 TextView textViewToChange = (TextView) findViewById(R.id.textView2);
                 textViewToChange.setText(success);
@@ -42,39 +43,40 @@ public class result1 extends AppCompatActivity {
             textViewToChange.setText(failure);
         }
         if( palette2.contains(color1) ) {
-            if(palette2.contains(color2)) {
+            if (palette2.contains(color2)) {
                 TextView textViewToChange = (TextView) findViewById(R.id.textView2);
                 textViewToChange.setText(success);
 
+            } else {
+                TextView textViewToChange = (TextView) findViewById(R.id.textView2);
+                textViewToChange.setText(failure);
             }
         }
-        else {
-            final TextView textViewToChange = (TextView) findViewById(R.id.textView2);
-            textViewToChange.setText(failure);
-        }
-        if( palette3.contains(color1) ) {
-            if(palette3.contains(color2)) {
-                final TextView textViewToChange = (TextView) findViewById(R.id.textView2);
-                textViewToChange.setText(success);
+            if (palette3.contains(color1)) {
+                if (palette3.contains(color2)) {
+                    final TextView textViewToChange = (TextView) findViewById(R.id.textView2);
+                    textViewToChange.setText(success);
 
+                } else {
+                    TextView textViewToChange = (TextView) findViewById(R.id.textView2);
+                    textViewToChange.setText(failure);
+                }
             }
-        }
-        else {
-            final TextView textViewToChange = (TextView) findViewById(R.id.textView2);
-            textViewToChange.setText(failure);
-        }
-        if( palette4.contains(color1) ) {
-            if(palette4.contains(color2)) {
-                final TextView textViewToChange = (TextView) findViewById(R.id.textView2);
-                textViewToChange.setText(success);
 
+        Button redButton = (Button) findViewById(R.id.button);
+
+        // Capture button clicks
+        redButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+
+                // Start NewActivity.class
+                Intent myIntent = new Intent(result1.this,
+                        ScrollingActivity.class);
+                startActivity(myIntent);
             }
-        }
-        else {
-            final TextView textViewToChange = (TextView) findViewById(R.id.textView2);
-            textViewToChange.setText(failure);
-        }
 
+        });
 
     }
 

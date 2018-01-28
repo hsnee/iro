@@ -40,6 +40,7 @@ public class colorchosen extends AppCompatActivity {
                 Intent myIntent = new Intent(colorchosen.this,
                         result1.class);
                 myIntent.putExtra("some_key", "red");
+                myIntent.putExtra("other_key", color1);
                 startActivity(myIntent);
             }
 
@@ -90,6 +91,86 @@ public class colorchosen extends AppCompatActivity {
                 Intent myIntent = new Intent(colorchosen.this,
                         result1.class);
                 myIntent.putExtra("some_key", "black");
+                myIntent.putExtra("other_key", color1);
+                startActivity(myIntent);
+            }
+
+        });
+        ImageButton blueButton = (ImageButton) findViewById(R.id.imageButton3);
+
+        // Capture button clicks
+        blueButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+
+                // Start NewActivity.class
+                Intent myIntent = new Intent(colorchosen.this,
+                        result1.class);
+                myIntent.putExtra("some_key", "blue");
+                myIntent.putExtra("other_key", color1);
+                startActivity(myIntent);
+            }
+
+        });
+        ImageButton brownButton = (ImageButton) findViewById(R.id.imageButton4);
+
+        // Capture button clicks
+        brownButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+
+                // Start NewActivity.class
+                Intent myIntent = new Intent(colorchosen.this,
+                        result1.class);
+                myIntent.putExtra("some_key", "brown");
+                myIntent.putExtra("other_key", color1);
+                startActivity(myIntent);
+            }
+
+        });
+        ImageButton greenButton = (ImageButton) findViewById(R.id.imageButton5);
+
+        // Capture button clicks
+        greenButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+
+                // Start NewActivity.class
+                Intent myIntent = new Intent(colorchosen.this,
+                        result1.class);
+                myIntent.putExtra("some_key", "green");
+                myIntent.putExtra("other_key", color1);
+                startActivity(myIntent);
+            }
+
+        });
+        ImageButton pinkButton = (ImageButton) findViewById(R.id.imageButton6);
+
+        // Capture button clicks
+        pinkButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+
+                // Start NewActivity.class
+                Intent myIntent = new Intent(colorchosen.this,
+                        result1.class);
+                myIntent.putExtra("some_key", "pink");
+                myIntent.putExtra("other_key", color1);
+                startActivity(myIntent);
+            }
+
+        });
+        ImageButton violetButton = (ImageButton) findViewById(R.id.imageButton7);
+
+        // Capture button clicks
+        violetButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+
+                // Start NewActivity.class
+                Intent myIntent = new Intent(colorchosen.this,
+                        result1.class);
+                myIntent.putExtra("some_key", "violet");
                 myIntent.putExtra("other_key", color1);
                 startActivity(myIntent);
             }
